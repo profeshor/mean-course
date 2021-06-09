@@ -9,6 +9,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatPaginatorModule } from '@angular/material/paginator'
 import { HttpClientModule } from '@angular/common/http';
 // import { MatInputModule } from '@angular/material';
 
@@ -37,6 +38,7 @@ import { from } from 'rxjs';
     MatExpansionModule,
     MatIconModule,
     MatProgressSpinnerModule,
+    MatPaginatorModule,
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule
