@@ -3,7 +3,16 @@
     My Messages
   </button>
   <span class="spacer"></span>
-  <button mat-icon-button routerLink="/create" routerLinkActive="mat-accent">
+  <button *ngIf="userIsAuthenticated" mat-icon-button routerLink="/create" routerLinkActive="mat-accent">
     <mat-icon>add</mat-icon>
+  </button>
+  <button *ngIf="!userIsAuthenticated" mat-icon-button routerLink="auth/login" routerLinkActive="mat-accent">
+    <mat-icon>login</mat-icon>
+  </button>
+  <button *ngIf="!userIsAuthenticated" mat-icon-button routerLink="auth/signup" routerLinkActive="mat-accent">
+    <mat-icon>person_add</mat-icon>
+  </button>
+  <button *ngIf="userIsAuthenticated" mat-icon-button (click)="onLogout()">
+    <mat-icon>logout</mat-icon>
   </button>
 </mat-toolbar>
